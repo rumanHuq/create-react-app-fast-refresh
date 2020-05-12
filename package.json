@@ -3,37 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
     "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@testing-library/jest-dom": "^5.7.0",
+    "@testing-library/react": "^10.0.4",
+    "@testing-library/user-event": "^10.1.2",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "customize-cra": "^0.9.1",
+    "customize-cra-react-refresh": "^1.0.1",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "react-app-rewired": "^2.1.6",
+    "stylelint": "^13.3.3",
+    "stylelint-config-lost": "^0.0.3",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-webpack-plugin": "^2.0.0",
+    "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "eject": "react-scripts eject",
+    "test": "node scripts/test.js",
+    "lint": "eslint --config .eslintrc.js --ext .ts,.tsx --max-warnings=500 src --fix && :"
   }
 }
