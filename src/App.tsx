@@ -2,6 +2,10 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+const chain: any = { a: {} };
+
+console.log(chain.a.b?.c || "non-existent");
+
 export const App = () => (
   <div className="App">
     <header className="App-header">

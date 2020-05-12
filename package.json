@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "react-scripts": "3.4.1",
-    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
     "@testing-library/user-event": "^10.1.2",
@@ -33,8 +32,9 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom --watchAll=false",
+    "test:watch": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
-    "test": "node scripts/test.js",
     "lint": "eslint --config .eslintrc.js --ext .ts,.tsx --max-warnings=500 src --fix && :"
   }
 }

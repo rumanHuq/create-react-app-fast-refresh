@@ -4,3 +4,4 @@
 - fast refresh enabled
 - eslint with airbnb preset
 - stylelint for tsx, scss,css
+- path alias support (gives warning though)

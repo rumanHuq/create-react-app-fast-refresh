@@ -1,13 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const { override } = require("customize-cra");
 const { addReactRefresh } = require("customize-cra-react-refresh");
 const { resolve } = require("path");
 const StylelintPlugin = require("stylelint-webpack-plugin");
-
-/* config-overrides.js */
-// module.exports = override((config, env) => {
-//   console.log(JSON.stringify({ config }, null, 2));
-
-// })(addReactRefresh({ disableRefreshCheck: true }));
 
 const webpack = (config, env) => {
   if (env === "development") {
