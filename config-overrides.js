@@ -22,4 +22,4 @@ const webpack = (config, env) => {
   return config;
 };
 
-module.exports = override(webpack, addReactRefresh({ disableRefreshCheck: true }));
+module.exports = override(webpack, addReactRefresh({ /* disableRefreshCheck: true  */}));
