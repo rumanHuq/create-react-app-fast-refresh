@@ -1,141 +1,132 @@
 
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "jest": true,
+  env: {
+    browser : true,
+    es6     : true,
+    jest    : true,
   },
-  "extends": [
+  extends: [
     "react-app",
     "airbnb",
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended"
   ],
-  "rules": {
+  rules: {
     "@typescript-eslint/member-ordering": [
       2,
-      {
-        "default": ["signature", "method", "constructor", "field"]
-      }
+      { default: ["signature", "method", "constructor", "field"] }
     ],
-    "@typescript-eslint/ban-ts-ignore": "off",
-    "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/indent": "off",
-    "@typescript-eslint/interface-name-prefix": "error",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-object-literal-type-assertion": "off",
-    "@typescript-eslint/no-this-alias": "off",
-    "camelcase": 0,
-    "comma-dangle": 0,
-    "comma-spacing": [
+    "no-use-before-define"                                : 0,
+    "@typescript-eslint/no-use-before-define"             : "error",
+    "@typescript-eslint/ban-ts-ignore"                    : "off",
+    "@typescript-eslint/camelcase"                        : "off",
+    "@typescript-eslint/explicit-function-return-type"    : "off",
+    "@typescript-eslint/indent"                           : "off",
+    "@typescript-eslint/no-explicit-any"                  : "off",
+    "@typescript-eslint/no-object-literal-type-assertion" : "off",
+    "@typescript-eslint/no-this-alias"                    : "off",
+    camelcase                                             : 0,
+    "comma-dangle"                                        : 0,
+    "comma-spacing"                                       : [
       "error",
       {
-        "after": true,
-        "before": false
+        after  : true,
+        before : false
       }
     ],
-    "func-names": 0,
-    "import/extensions": 0,
-    "import/no-cycle": 0,
-    "import/no-named-as-default": 0,
-    "import/no-unresolved": [
+    "func-names"                 : 0,
+    "import/extensions"          : 0,
+    "import/no-cycle"            : 0,
+    "import/no-named-as-default" : 0,
+    "import/no-unresolved"       : [
       2,
-      {
-        "caseSensitive": true
-      }
+      { caseSensitive: true }
     ],
-    "indent": [
+    indent: [
       "error",
       2,
-      {
-        "SwitchCase": 1
-      }
+      { SwitchCase: 1 }
     ],
-    "jsx-a11y/anchor-is-valid": 0,
-    "key-spacing": [
+    "jsx-a11y/anchor-is-valid" : 0,
+    "key-spacing"              : [
       "error",
       {
-        "align": {
-          "afterColon": true,
-          "beforeColon": true,
-          "on": "colon"
+        align: {
+          afterColon  : true,
+          beforeColon : true,
+          on          : "colon"
         }
       }
     ],
-    "linebreak-style": "error",
-    "lines-between-class-members": 0,
-    "max-len": [
+    "linebreak-style"             : "error",
+    "lines-between-class-members" : 0,
+    "max-len"                     : [
+      "error",
+      { code: 160 }
+    ],
+    "no-multi-spaces"         : 2,
+    "no-multiple-empty-lines" : [
       "error",
       {
-        "code": 160
+        max    : 1,
+        maxEOF : 0
       }
     ],
-    "no-multi-spaces": 2,
-    "no-multiple-empty-lines": [
+    "no-param-reassign"    : 0,
+    "no-throw-literal"     : 0,
+    "no-trailing-spaces"   : "error",
+    "no-underscore-dangle" : 0,
+    "no-unused-vars"       : 0,
+    "object-curly-newline" : [
       "error",
-      {
-        "max": 1,
-        "maxEOF": 0
-      }
-    ],
-    "no-param-reassign": 0,
-    "no-throw-literal": 0,
-    "no-trailing-spaces": "error",
-    "no-underscore-dangle": 0,
-    "no-unused-vars": 0,
-    "object-curly-newline": [
-      "error",
-      {
-        "multiline": true
-      }
+      { multiline: true }
     ],
     "object-curly-spacing": [
       "error",
       "always"
     ],
-    "quotes": [
+    quotes: [
       "error",
       "double"
     ],
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [
+        extensions: [
           ".tsx",
           ".jsx"
         ]
       }
     ],
-    "import/prefer-default-export": 0,
-    "import/no-default-export": 2,
-    "react/jsx-props-no-spreading": 0,
-    "react/no-array-index-key": 0,
-    "react/prop-types": 0,
-    "react/react-in-jsx-scope": "off",
-    "require-jsdoc": [
+    "import/prefer-default-export" : 0,
+    "import/no-default-export"     : 2,
+    "react/jsx-props-no-spreading" : 0,
+    "react/no-array-index-key"     : 0,
+    "react/prop-types"             : 0,
+    "react/react-in-jsx-scope"     : "off",
+    "require-jsdoc"                : [
       "error",
       {
-        "require": {
-          "ArrowFunctionExpression": false,
-          "ClassDeclaration": true,
-          "FunctionDeclaration": true,
-          "FunctionExpression": false,
-          "MethodDefinition": false
+        require: {
+          ArrowFunctionExpression : false,
+          ClassDeclaration        : true,
+          FunctionDeclaration     : true,
+          FunctionExpression      : false,
+          MethodDefinition        : false
         }
       }
     ],
-    "semi": "error",
-    "space-before-blocks": [
+    semi                  : "error",
+    "space-before-blocks" : [
       "error",
       {
-        "classes": "never",
-        "functions": "always",
-        "keywords": "always"
+        classes   : "never",
+        functions : "always",
+        keywords  : "always"
       }
     ]
   },
-  "settings": {
+  settings: {
     "import/parsers": {
       "@typescript-eslint/parser": [
         ".ts",
@@ -143,27 +134,27 @@ module.exports = {
       ]
     },
     "import/resolver": {
-      "alias": {
-        "extensions": [
+      alias: {
+        extensions: [
           ".ts",
           ".js",
           ".tsx",
           ".jsx",
           ".json"
         ],
-        "map": [
+        map: [
           [
             "@",
             "./src/"
           ]
         ]
       },
-      "eslint-import-resolver-typescript": true,
-      "node": true,
-      "webpack": {
-        "config": {
-          "resolve": {
-            "extensions": [
+      "eslint-import-resolver-typescript" : true,
+      node                                : true,
+      webpack                             : {
+        config: {
+          resolve: {
+            extensions: [
               ".ts",
               ".js",
               ".tsx",
@@ -174,19 +165,19 @@ module.exports = {
       }
     }
   },
-  "overrides": [
+  overrides: [
     {
-      "files": [
+      files: [
         "*.{test,spec,story}.{js,ts,jsx,tsx}"
       ],
-      "rules": {
-        "require-jsdoc": 0,
-        "@typescript-eslint/explicit-function-return-type": 0,
-        "@typescript-eslint/no-explicit-any": 0,
-        "@typescript-eslint/camelcase": 0,
-        "@typescript-eslint/no-unused-vars": 0,
-        "import/no-extraneous-dependencies": 0
+      rules: {
+        "require-jsdoc"                                    : 0,
+        "@typescript-eslint/explicit-function-return-type" : 0,
+        "@typescript-eslint/no-explicit-any"               : 0,
+        "@typescript-eslint/camelcase"                     : 0,
+        "@typescript-eslint/no-unused-vars"                : 0,
+        "import/no-extraneous-dependencies"                : 0
       }
     }
   ]
-}
+};
