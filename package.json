@@ -30,7 +30,7 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "react-app-rewired": "^2.1.8",
     "react-scripts": "4.0.3",
-    "stylelint": "13.13.1",
+    "stylelint": "15.10.1",
     "stylelint-config-lost": "^0.0.3",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-sass-guidelines": "8.0.0",
